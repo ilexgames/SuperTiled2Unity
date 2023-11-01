@@ -43,7 +43,10 @@ namespace SuperTiled2Unity.Editor
                     tilePoly.IsClosed = collision.IsClosed;
                     tilePoly.ColliderLayerName = collision.m_PhysicsLayer;
                     tilePoly.ColliderLayerId = LayerMask.NameToLayer(collision.m_PhysicsLayer);
+                    tilePoly.ColliderTagName = collision.m_Tag;
                     tilePoly.IsTrigger = m_ImportContext.GetIsTriggerOverridable(collision.m_IsTrigger);
+
+                    // Debug.Log($"tilePoly.ColliderTagName: {tilePoly.ColliderTagName}");
 
                     var points = m_ImportContext.MakePointsPPU(collision.Points);
                     points = points.Select(pt => (Vector2)m_Transform.MultiplyPoint(pt)).ToArray();

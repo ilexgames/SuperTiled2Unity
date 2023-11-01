@@ -83,8 +83,19 @@ namespace SuperTiled2Unity.Editor
                     }
 
                     var layerName = LayerMask.LayerToName(layerId);
-                    var goCollider = new GameObject("Collision_" + layerName);
+
+                    var tagName = key.TagName;
+
+                    // Use default tag if received tag name is empty or null
+                    // REVIEW: Maybe use parent's or the tilemap's tag?
+                    if (string.IsNullOrEmpty(tagName))
+                    {
+                        tagName = "Untagged";
+                    }
+
+                    var goCollider = new GameObject($"Collision_{layerName}_{tagName}");
                     goCollider.layer = layerId;
+                    SetGameObjectTag(goCollider, tagName);
                     m_TilemapGameObject.AddChildWithUniqueName(goCollider);
 
                     // Rigid body is needed for composite collider
@@ -105,6 +116,7 @@ namespace SuperTiled2Unity.Editor
                     {
                         var goPolygon = new GameObject("Polygon");
                         goPolygon.layer = layerId;
+                        SetGameObjectTag(goPolygon, tagName);
                         goCollider.AddChildWithUniqueName(goPolygon);
 
                         var polyCollider = goPolygon.AddComponent<PolygonCollider2D>();
@@ -120,6 +132,7 @@ namespace SuperTiled2Unity.Editor
                     {
                         var goPolyline = new GameObject("Polyline");
                         goPolyline.layer = layerId;
+                        SetGameObjectTag(goPolyline, tagName);
                         goCollider.AddChildWithUniqueName(goPolyline);
 
                         var edgeCollider = goPolyline.AddComponent<EdgeCollider2D>();
@@ -142,6 +155,16 @@ namespace SuperTiled2Unity.Editor
             polygons = new TilePolygonCollection(tile, tileId, m_ImportContext, m_MapComponent);
             m_TilePolygonDatabase.Add(tileId.ImportedlTileId, polygons);
             return polygons;
+        }
+
+        private void SetGameObjectTag(GameObject go, string tag)
+        {
+            go.tag = tag;
+
+            // if (go.CompareTag("Untagged") && !tag.Equals("Untagged"))
+            // {
+            //     Debug.Log($"Invalid tag {tag} for collider Collider_{LayerMask.LayerToName(go.layer)}");
+            // }
         }
     }
 }

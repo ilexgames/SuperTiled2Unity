@@ -428,6 +428,25 @@ namespace SuperTiled2Unity.Editor
             {
                 collision.m_IsTrigger = triggerProperty.GetValueAsBool();
             }
+
+            // Check properties for tag
+            var tagProperty = GetCollisionOrTileOrTilesetProperty(collision, tile, StringConstants.Unity_Tag);
+            if (tagProperty != null)
+            {
+                if (string.IsNullOrEmpty(tagProperty.m_Value))
+                {
+                    Debug.LogWarning($"Collision_{collision.m_PhysicsLayer} has {StringConstants.Unity_Tag} attribute, but it's value is empty! Using \"Untagged\" tag.");
+                    collision.m_Tag = "Untagged";
+                }
+                else
+                {
+                    collision.m_Tag = tagProperty.m_Value;
+                }
+            }
+            else
+            {
+                collision.m_Tag = "Untagged";
+            }
         }
 
         private CustomProperty GetCollisionOrTileOrTilesetProperty(CollisionObject collision, SuperTile tile, string propertyName)

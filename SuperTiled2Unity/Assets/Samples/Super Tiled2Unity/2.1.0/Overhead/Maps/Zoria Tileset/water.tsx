@@ -1,28 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="water" tilewidth="16" tileheight="16" tilecount="228" columns="12">
+<tileset version="1.10" tiledversion="1.10.2" name="water" tilewidth="16" tileheight="16" tilecount="228" columns="12">
  <properties>
   <property name="unity:isTrigger" type="bool" value="true"/>
   <property name="unity:layer" value="Water"/>
  </properties>
  <image source="water.png" width="192" height="304"/>
  <tile id="0">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
   </objectgroup>
  </tile>
  <tile id="24">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
    <object id="8" x="0" y="0" width="4" height="16">
     <properties>
+     <property name="unity:Tag" value="WaterBorder"/>
      <property name="unity:isTrigger" type="bool" value="false"/>
-     <property name="unity:layer" value="Default"/>
+     <property name="unity:layer" value="Water"/>
     </properties>
    </object>
    <object id="9" x="0" y="0" width="16" height="4">
     <properties>
+     <property name="unity:Tag" value="WaterBorder"/>
      <property name="unity:isTrigger" type="bool" value="false"/>
-     <property name="unity:layer" value="Default"/>
+     <property name="unity:layer" value="Water"/>
     </properties>
    </object>
   </objectgroup>
@@ -34,12 +48,19 @@
   </animation>
  </tile>
  <tile id="25">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
    <object id="2" x="0" y="0" width="16" height="4">
     <properties>
+     <property name="unity:Tag" value="WaterBorder"/>
      <property name="unity:isTrigger" type="bool" value="false"/>
-     <property name="unity:layer" value="Default"/>
+     <property name="unity:layer" value="Water"/>
     </properties>
    </object>
   </objectgroup>
@@ -51,12 +72,19 @@
   </animation>
  </tile>
  <tile id="36">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
    <object id="2" x="0" y="0" width="4" height="16">
     <properties>
+     <property name="unity:Tag" value="WaterBorder"/>
      <property name="unity:isTrigger" type="bool" value="false"/>
-     <property name="unity:layer" value="Default"/>
+     <property name="unity:layer" value="Water"/>
     </properties>
    </object>
   </objectgroup>
@@ -68,8 +96,14 @@
   </animation>
  </tile>
  <tile id="37">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="NonExistantTagg"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="37" duration="250"/>
@@ -79,18 +113,26 @@
   </animation>
  </tile>
  <tile id="48">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
    <object id="2" x="0" y="0" width="4" height="16">
     <properties>
+     <property name="unity:Tag" value="WaterBorder"/>
      <property name="unity:isTrigger" type="bool" value="false"/>
-     <property name="unity:layer" value="Default"/>
+     <property name="unity:layer" value="Water"/>
     </properties>
    </object>
    <object id="3" x="0" y="12" width="16" height="4">
     <properties>
+     <property name="unity:Tag" value="WaterBorder"/>
      <property name="unity:isTrigger" type="bool" value="false"/>
-     <property name="unity:layer" value="Default"/>
+     <property name="unity:layer" value="Water"/>
     </properties>
    </object>
   </objectgroup>
@@ -102,12 +144,19 @@
   </animation>
  </tile>
  <tile id="49">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
    <object id="2" x="0" y="12" width="16" height="4">
     <properties>
+     <property name="unity:Tag" value=""/>
      <property name="unity:isTrigger" type="bool" value="false"/>
-     <property name="unity:layer" value="Default"/>
+     <property name="unity:layer" value="Water"/>
     </properties>
    </object>
   </objectgroup>
@@ -119,8 +168,14 @@
   </animation>
  </tile>
  <tile id="121">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="121" duration="250"/>
@@ -130,8 +185,14 @@
   </animation>
  </tile>
  <tile id="122">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="122" duration="250"/>
@@ -141,8 +202,14 @@
   </animation>
  </tile>
  <tile id="133">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="133" duration="250"/>
@@ -152,8 +219,14 @@
   </animation>
  </tile>
  <tile id="134">
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterDeep"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="134" duration="250"/>
@@ -167,8 +240,14 @@
    <property name="unity:isTrigger" type="bool" value="false"/>
    <property name="unity:layer" value="Default"/>
   </properties>
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterFall"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="192" duration="250"/>
@@ -182,8 +261,14 @@
    <property name="unity:isTrigger" type="bool" value="false"/>
    <property name="unity:layer" value="Default"/>
   </properties>
-  <objectgroup draworder="index">
-   <object id="1" x="0" y="0" width="16" height="16"/>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="16" height="16">
+    <properties>
+     <property name="unity:Tag" value="WaterFall"/>
+     <property name="unity:isTrigger" type="bool" value="false"/>
+     <property name="unity:layer" value="Water"/>
+    </properties>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="204" duration="250"/>

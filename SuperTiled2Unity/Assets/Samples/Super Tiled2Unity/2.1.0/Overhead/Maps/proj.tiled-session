@@ -1,0 +1,33 @@
+{
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "TestOverhead.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 336.33333333333326,
+                "y": 234
+            }
+        },
+        "Zoria Tileset/overhead-objects.tsx": {
+            "dynamicWrapping": true
+        },
+        "Zoria Tileset/scraps.tsx": {
+            "dynamicWrapping": false
+        },
+        "Zoria Tileset/tiles.tsx": {
+            "dynamicWrapping": false
+        },
+        "Zoria Tileset/water.tsx": {
+            "dynamicWrapping": false
+        }
+    },
+    "openFiles": [
+    ],
+    "project": "proj.tiled-project",
+    "recentFiles": [
+        "TestOverhead.tmx"
+    ]
+}
